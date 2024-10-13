@@ -1,0 +1,501 @@
+/* Definindo estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    color: #9b59b6;
+    /* Roxo vibrante */
+}
+
+p,
+a {
+    color: whitesmoke
+}
+
+a {
+    text-decoration: none;
+    color: #9b59b6;
+}
+
+#sobre-mim {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0px #000000, -4px -4px 0px #000000;
+    border: 2px solid #6200ea;
+}
+
+/* Borda animada */
+.borda-animada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.borda-animada span {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(98, 0, 234, 0.8);
+    animation: mover 3s linear infinite;
+}
+
+
+/* Blocos no topo */
+.borda-animada .topo span {
+    top: 0;
+    animation: mover-horizontal 5s linear infinite;
+}
+
+/* Blocos na parte inferior */
+.borda-animada .baixo span {
+    bottom: 0;
+    animation: mover-horizontal 5s linear infinite reverse;
+}
+
+/* Blocos na esquerda */
+.borda-animada .esquerda span {
+    left: 0;
+    animation: mover-vertical 4s linear infinite;
+}
+
+/* Blocos na direita */
+.borda-animada .direita span {
+    right: 0;
+    animation: mover-vertical 4s linear infinite reverse;
+}
+
+/* Ajustar o delay para cada span para não começarem ao mesmo tempo */
+.borda-animada .topo span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.borda-animada .topo span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.borda-animada .topo span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.borda-animada .topo span:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.borda-animada .topo span:nth-child(5) {
+    animation-delay: 4s;
+}
+
+/* Ajuste o mesmo para os outros lados */
+.borda-animada .baixo span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.borda-animada .baixo span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.borda-animada .baixo span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.borda-animada .baixo span:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.borda-animada .baixo span:nth-child(5) {
+    animation-delay: 4s;
+}
+
+.borda-animada .esquerda span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.borda-animada .esquerda span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.borda-animada .esquerda span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.borda-animada .esquerda span:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.borda-animada .esquerda span:nth-child(5) {
+    animation-delay: 4s;
+}
+
+.borda-animada .direita span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.borda-animada .direita span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.borda-animada .direita span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.borda-animada .direita span:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.borda-animada .direita span:nth-child(5) {
+    animation-delay: 4s;
+}
+
+
+/* definição da Animação horizontal */
+@keyframes mover-horizontal {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* Animação vertical */
+@keyframes mover-vertical {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+
+
+
+
+
+/* estilização do título */
+#sobre-mim h1 {
+    color: #c783ff;
+    /* Cor do texto */
+    -webkit-text-stroke: 2px #6200eafb;
+    /* Borda roxa escura */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    /* Sombra para profundidade */
+}
+
+/* estilização do título */
+#experiencias h2 {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: white;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0px #000000, -4px -4px 0px #000000;
+    border: 2px solid #6200ea;
+}
+
+/* estilização do título */
+#tecnologias_section {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 0px #000000, -4px -4px 0px #000000;
+    border: 2px solid #6200ea;
+}
+
+
+
+/* ---Estilo CSS para galeria de artes--- */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Centralizar verticalmente */
+}
+
+.image-carousel {
+    position: relative;
+    width: 450px;
+    /* Definir o tamanho da imagem */
+}
+
+.focus-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.prev-button {
+    left: -50px;
+}
+
+.next-button {
+    right: -50px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*--- ----*/
+
+
+
+
+
+
+/* Estilizando o menu lateral */
+#menu {
+    position: fixed;
+    top: 0;
+    /* Colocando o menu no topo */
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    /* Fazendo o menu ocupar toda a altura da tela */
+    background-color: #1c1c1c;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_img img {
+    width: 100%;
+    height: auto;
+}
+
+.container-filter {
+    position: relative;
+    /* Torna o container o contexto de posicionamento */
+    width: 100%;
+    height: auto;
+    /* Defina a altura conforme necessário */
+}
+
+.menu_img {
+    position: relative;
+    /* Mantém a imagem existente em um nível normal */
+    z-index: 2;
+    /* Essa imagem ficará na frente */
+    width: 100%;
+    height: auto;
+}
+
+.image-filtro {
+    background-color: #6200ea;
+    /* Cor de fundo desejada */
+    position: absolute;
+    /* Coloca a nova imagem em uma posição específica */
+    z-index: 2;
+    /* Define um z-index menor para que fique atrás */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+    /* Mistura a cor de fundo com a imagem */
+    opacity: 0.8;
+    /* Ajuste a opacidade para equilibrar o efeito */
+}
+
+#menu a {
+    width: 100%;
+    height: 10%;
+    /* Pode ser ajustado se necessário */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transição suave */
+    text-align: center;
+    padding: 20px 0;
+    border-top: 15px solid #6200ea;
+    border-bottom: 15px solid #5300c793;
+    border-right: 20px solid #6200eafb;
+    color: #fff;
+    font-size: 18px;
+}
+
+#menu a:hover {
+    background: #9b59b6;
+    color: #fff;
+    /* Muda a cor do texto ao passar o mouse */
+}
+
+
+
+/* Definindo a área principal */
+.main-content {
+    background-image: url('1728313166823.jpg');
+    background-size: cover;
+    /* Faz a imagem cobrir toda a tela */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+    background-attachment: fixed;
+    /* A imagem ficará fixa no fundo mesmo quando rolar a página */
+    margin-left: 200px;
+    padding: 20px;
+}
+
+/* Estilizando a Logo */
+#logo {
+    position: sticky;
+}
+
+/* Seção: Sobre Mim */
+#sobre-mim {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sobre-mim img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* Seção: Experiências */
+.experiencia {
+    background: #222;
+    /* Fundo mais escuro */
+    padding: 20px;
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Sombra */
+    margin-top: 30px;
+}
+
+.experiencia h3 {
+    color: #9b59b6;
+
+}
+
+.experiencia a {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.experiencia p {
+    margin-bottom: 20px;
+}
+
+/* Seção: Contato */
+#contatos {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: white;
+    box-shadow: 4px 4px 0px #000000, -4px -4px 0px #000000;
+    border: 2px solid #6200ea;
+    text-align: center;
+}
+
+#contatos h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.contato-item {
+    margin-bottom: 20px;
+}
+
+.img-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contato-icone-instagram {
+    width: 30px;
+    height: 30px;
+}
+
+.contato-icone-github {
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    /* Deixa o ícone branco para combinar com o fundo escuro */
+}
+
+address {
+    font-style: normal;
+    color: white;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding-top: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+        /* Remove a margem quando o menu é horizontal */
+        padding: 20px;
+    }
+
+    #menu a {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    #sobre-mim img {
+        width: 150px;
+        height: 150px;
+    }
+
+}

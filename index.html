@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!--https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <!-- usar o "link" para puxar aquilo que quero de uma pasta que criei utilizar no container_accordion, colocar ele junto ao texto do conteudo-->
+
+    <!--https://getbootstrap.com/docs/5.3/components/navbar/ -->
+    <!-- https://getbootstrap.com/docs/5.3/layout/grid/ -->
+
+    <!-- https://startbootstrap.com/themes -->
+
+    <!-- fazer um Wireframe para a página-->
+
+
+    <header>
+        <!-- Menu lateral -->
+        <nav id="menu" aria-label="Menu de Navegação">
+            <div class="container-filter">
+                <img src="tech_img.png" alt="imagem logo" class="menu_img" , draggable="false">
+                <img src="img_filter.png" alt="Imagem" class="image-filtro">
+            </div>
+            <a href="#sobre-mim">Sobre mim</a>
+            <a href="#experiencias">Experiências</a>
+            <a href="#contatos">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <!-- Seção Sobre mim -->
+        <section id="sobre-mim">
+            <!-- criando Blocos para serem animados -->
+            <div class="borda-animada">
+                <!-- Blocos no topo -->
+                <div class="topo">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <!-- Blocos na parte inferior -->
+                <div class="baixo">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <!-- Blocos na esquerda -->
+                <div class="esquerda">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <!-- Blocos na direita -->
+                <div class="direita">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <!-- Texto sobre mim-->
+            <div>
+                <h1>Sobre mim, Guilherme Campo Soares</h1>
+
+                <p> Sou um entusiasta de tecnologia, artes e ciências no geral. Desde cedo, sempre fui curioso sobre
+                    como as coisas funcionam e isso me levou ao mundo da programação, onde posso transformar ideias em
+                    realidade. Atualmente, estou cursando Ciência da Computação na UVV, no 1º período, depois de ter
+                    concluído 5 semestres de Bacharelado em Química na UFES.</p>
+                <p> Adoro criar projetos desafiadores e aprender novas habilidades, especialmente quando se trata de
+                    resolver problemas complexos com diferentes linguagens e frameworks. Além da programação, sou
+                    apaixonado por jogos e arte digital, sempre buscando unir funcionalidade e estética em tudo que
+                    faço.</p>
+            </div>
+
+            <img src="9fGqbS0KNBH1in3ffo7R_0.png" alt="Foto de Perfil">
+
+        </section>
+
+        <!-- Seção Experiências -->
+        <section id="experiencias">
+
+            <h2>Experiências</h2>
+
+            <div class="experiencia">
+                <h3>Desenvolvimento Web</h3>
+
+                <p>Iniciante em desenvolvimento web, utilizando tecnologias como HTML, CSS, JavaScript e frameworks como
+                    React.</p>
+                <a href="https://github.com/seu-usuario/projeto1" target="_blank">Portfólio - Meu site pessoal</a>
+                <p>Projeto focado em criar um site portfólio elegante, com layout minimalista e altamente funcional.</p>
+
+            </div>
+
+            <div class="experiencia">
+                <h3>Arte Digital e Concept art</h3>
+
+                <p>Galeria de Artes Digitais</p>
+
+                <p>Criação de artes gráficas para redes sociais, identidade visual para pequenas empresas e edição de
+                    imagens profissionais.</p>
+                <p>Essa é uma pequena parcela das artes que já fiz, para ter acesso e solicitar que alguma seja feita me
+                    siga nas redes sociais e entre em contato.</p>
+
+
+                <!-- Estrutura HTML para galeria de artes-->
+                <div class="container">
+                    <div class="image-carousel">
+                        <button class="prev-button">&lt;</button>
+                        <img id="current-image" src="imagem_0_copyright_sujeito_a_paulada.jpg" alt="Imagem em foco"
+                            class="focus-image">
+                        <button class="next-button">&gt;</button>
+                    </div>
+                </div>
+
+                <!-- Script JavaScript para que os botões possam navegar pelas imagens -->
+                <script>
+                    const images = [
+                        "imagem_0_copyright_sujeito_a_paulada.jpg",
+                        "imagem_1_copyright_sujeito_a_paulada.jpg",
+                        "imagem_2_copyright_sujeito_a_paulada.jpg",
+                        "imagem_3_copyright_sujeito_a_paulada.jpg",
+                        "imagem_4_copyright_sujeito_a_paulada.jpg",
+                        "imagem_5_copyright_sujeito_a_paulada.jpg",
+                        "imagem_6_copyright_sujeito_a_paulada.jpg",
+                    ];
+
+                    let currentIndex = 0;
+                    const currentImage = document.getElementById("current-image");
+
+                    document.querySelector(".next-button").addEventListener("click", function () {
+                        currentIndex = (currentIndex + 1) % images.length;
+                        currentImage.src = images[currentIndex];
+                    });
+
+                    document.querySelector(".prev-button").addEventListener("click", function () {
+                        currentIndex = (currentIndex - 1 + images.length) % images.length;
+                        currentImage.src = images[currentIndex];
+                    });
+                </script>
+                <!-- Explicação carrossel de imagens: 
+                   1. HTML: Cria uma estrutura simples com uma imagem central e dois botões.
+                   2. CSS: Estiliza a galeria, centralizando a imagem e posicionando os botões de navegação.
+                   3. JavaScript: Implementa a lógica de navegação, permitindo que os botões avancem e retrocedam na lista de imagens.-->
+
+            </div>
+
+        </section>
+
+        <section id="tecnologias_section">
+
+            <h4>Tecnologias que domino</h4>
+
+            <div class="tecnologias">
+                <ul>
+                    <li>IA para criação de imagens, vídeos curtos, GIFs, manipulação e edição de imagem atráves de
+                        aplicação web e software licenciado;</li>
+                    <li>HTML e CSS no desenvolvimento de software web.</li>
+                    <li>Krita - software open source de pintura digital, ilustração, concept art, animação, conversor de
+                        formatos, retoques e manipulação de fotos.</li>
+                    <li>Computador e Mesa Digitalizadora</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- Seção Contato -->
+        <footer id="contatos">
+            <h2>Contato</h2>
+
+            <div class="contato-item">
+                <h3>Instagram</h3>
+                <div class="img-link">
+                    <a href="https://www.instagram.com/gui.campo/" target="_blank">@gui.campo</a>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                        class="contato-icone-instagram">
+                </div>
+            </div>
+
+            <div class="contato-item">
+                <h3>GitHub</h3>
+                <div class="img-link">
+                    <a href="https://github.com/Enersh1" target="_blank">github.com/Enersh1</a>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"
+                        class="contato-icone-github">
+                </div>
+            </div>
+
+            <div class="contato-item">
+                <h3>Email</h3>
+                <address>
+                    <a href="enorenersh@gmail.com">enorenersh@gmail.com</a>
+                </address>
+            </div>
+
+            <p>&copy; 2024 Meu Portfólio</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
